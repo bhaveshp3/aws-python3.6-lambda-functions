@@ -13,7 +13,7 @@ def lambda_handler(event, context):
     creationdate = datetime.datetime.now()
     creationdatetimestr =creationdate.strftime('%Y-%m-%d_%H-%M-%S')
 
-    instanceid = 'i-0c2f14c0ab0430147'  ## project Instance Id
+    instanceid = 'i-0xxxxxxxxxx7'  ## project Instance Id
 
     newimage = ec2client.create_image(Description="production-website_created_by_Lambda_function",InstanceId=instanceid,DryRun=False,Name="production-website-"+creationdatetimestr,NoReboot=True)
 
